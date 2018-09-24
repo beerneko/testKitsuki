@@ -1,23 +1,25 @@
 @extends('layouts.app')
             
 @section('content')
-<div class="hero-image">
-        <div class="hero-text">
-            <blockquote class="about-center">
-                <H1>{{$title}}</H1>
-                <H1>杵築</H1>
-                <p>
-                    Welcome to the hidden beautiful country side town, Kitsuki, web site.
-                    The general area of Kitsuki has a great many period Samurai houses that date from this period, 
-                    and the area is visually in keeping with the historic nature of the time.
-                    Not too many foriegners have yet come to visit like any other famouse tourist spots,
-                    so that Kitsuki city is still kept being quiet, unique and just same as the old time...
-                </p>
-            </blockquote>
-        </div>
+<script>
+</script>
+<div class="hero-image" id="top">
+    <div class="hero-text">
+        <blockquote class="about-center">
+            <H1>{{$title}}</H1>
+            <H1>杵築</H1>
+            <p>
+                Welcome to the hidden beautiful country side town, Kitsuki, web site.
+                The general area of Kitsuki has a great many period Samurai houses that date from this period, 
+                and the area is visually in keeping with the historic nature of the time.
+                Not too many foriegners have yet come to visit like any other famouse tourist spots,
+                so that Kitsuki city is still kept being quiet, unique and just same as the old time...
+            </p>
+        </blockquote>
     </div>
+</div>
 
-<div class="hero-image hero-image-sakura">
+<div class="hero-image hero-image-sakura" id="sakura">
     <div class="hero-text">
         <blockquote class="about-center">
             <h1>Kitsuki Castle</h1>
@@ -29,7 +31,7 @@
     </div>
 </div>
 
-<div class="hero-image hero-image-tomaya">
+<div class="hero-image hero-image-tomaya"  id="tomaya">
     <div class="hero-text">
         <blockquote class="about-center">
             <h1>DownTown Kitsuki</h1>
@@ -42,7 +44,7 @@
     </div>
 </div>
 
-<div class="hero-image hero-image-gyoko">
+<div class="hero-image hero-image-gyoko" id="gyoko">
     <div class="hero-text">
         <blockquote class="about-center">
             <h1>Kitsuki Fisherman's Bay</h1>
@@ -51,7 +53,7 @@
     </div>
 </div>
 
-<div class="hero-image hero-image-wasyoku">
+<div class="hero-image hero-image-wasyoku" id="wasyoku">
     <div class="hero-text">
         <blockquote class="about-center">
             <h1>Kitsuki Gourmet</h1>
@@ -60,7 +62,7 @@
     </div>
 </div>
 
-<div class="hero-image hero-image-onsen">
+<div class="hero-image hero-image-onsen" id="onsen">
     <div class="hero-text">
         <blockquote class="about-center">
             <h1>Kitsuki Onsen</h1>
