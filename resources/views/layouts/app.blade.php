@@ -15,16 +15,19 @@
     </head>
     <body>
         @include('inc.navbar')
-        <div id="app" style='min-width: 100%;'>
-            @yield('content')
-        </div>
+        @yield('content')
         <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-</body>
-<script>
-    // window.onload = function() {
-    //     CKEDITOR.replace( 'article-ckeditor' );
-    //     CKEDITOR.display('none');
-    // };
-    CKEDITOR.replace( 'article-ckeditor' );
-</script>
+    </body>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('a[href*=#]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+            });
+        });
+    </script>
+
 </html>
