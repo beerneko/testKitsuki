@@ -75,8 +75,12 @@ ul.nav li.active a {
 }
 
 /*********************************
-........
+/*********************************
+Post cosmetic part.
+/*********************************
+Picture set.
 */
+#post { background: url(/images/kitsuki-machi.gif) center center / cover no-repeat;}
 .title-h1{
     color:#000;
 }
@@ -88,8 +92,11 @@ ul.nav li.active a {
     font-size:125%;
 }
 
+/*********************************
+Picture set.
+*/
 .hero-image {
-    background-image: url("/images/kitsuki-kimono.gif");
+    background-image: url("/images/kitsuki-machi.gif");
     background-color: #cccccc;
     height: 650px;
     background-position: center;
@@ -108,6 +115,7 @@ ul.nav li.active a {
     color: rgb(59, 59, 44);
 }
 
+
 /*********************************
 /*********************************
 Virtical slider by clicking event.
@@ -124,7 +132,7 @@ Virtical slider Picture set.
 /*********************************
 Virtical slider Section set.
 */
-.session_set a {
+.section_set a {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -138,7 +146,7 @@ Virtical slider Section set.
     text-decoration: none;
     transition: opacity .3s;
 }
-.session_set a:hover {
+.section_set a:hover {
     opacity: .5;
 }
 

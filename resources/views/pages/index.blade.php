@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section id="top" class="session_set">
+    <section id="top" class="section_set">
         <a href="#onsen" class="up_a"><span class="up_allow"></span></a>
         <div class="centertext">
             <h1>杵築 - Kitsuki</h1>
@@ -16,7 +16,7 @@
         <a href="#sakura" class="down_a"><span class="down_allow"></span></a>
     </section>
 
-    <section id="sakura" class="session_set">
+    <section id="sakura" class="section_set">
             <a href="#top" class="up_a"><span class="up_allow"></span></a>
             <div class="centertext">
                 <h1>Kitsuki Castle</h1>
@@ -29,7 +29,7 @@
         </div>
     </section>
 
-    <section id="tomaya" class="session_set">
+    <section id="tomaya" class="section_set">
             <a href="#sakura" class="up_a"><span class="up_allow"></span></a>
             <div class="centertext">
                 <h1>DownTown Kitsuki</h1>
@@ -41,7 +41,7 @@
         </div>
     </section>
 
-    <section id="gyoko" class="session_set">
+    <section id="gyoko" class="section_set">
             <a href="#tomaya" class="up_a"><span class="up_allow"></span></a>
             <div class="centertext">
                 <h1>Kitsuki Fisherman's Bay</h1>
@@ -51,7 +51,7 @@
         </div>
     </section>
 
-    <section id="wasyoku" class="session_set">
+    <section id="wasyoku" class="section_set">
             <a href="#gyoko" class="up_a"><span class="up_allow"></span></a>
             <div class="centertext">
                 <h1>Kitsuki Gourmet</h1>
@@ -61,7 +61,7 @@
         </div>
     </section>
 
-    <section id="onsen" class="session_set">
+    <section id="onsen" class="section_set">
             <a href="#wasyoku" class="up_a"><span class="up_allow"></span></a>
             <div class="centertext">
                 <h1>Kitsuki Onsen</h1>

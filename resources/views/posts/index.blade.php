@@ -7,7 +7,7 @@
                 @if(count($posts)>0)
                 {{ $posts->links() }}
                 @foreach($posts as $post)
-                    <div class="list-group-item" style="background: #ffffff85 !important;">
+                    <div class="list-group-item">
                         <H3><a href="posts/{{ $post->id }}">{{ $post->title }}</a></H3>
                         <small>Written on {{$post->created_at}} by {{ $post->user->name }}</small>
                     </div>
