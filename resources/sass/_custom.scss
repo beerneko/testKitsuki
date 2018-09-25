@@ -25,18 +25,26 @@ section::after {
     background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 95%,rgba(0,0,0,.5) 100%);
     background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 95%,rgba(0,0,0,.5) 100%);
 }
-section h1 {
+section .centertext {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     z-index: 2;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+section .centertext h1 {
     color: #fff;
     font-family: 'Tangerine', serif;
     font-size: 64px;
-    text-align: center;
     white-space: nowrap;
+}
+section .centertext p {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: left;
 }
   
 H3 a, H3 a:visited {
@@ -101,7 +109,10 @@ ul.nav li.active a {
 }
 
 /*********************************
+/*********************************
 Virtical slider by clicking event.
+/*********************************
+Virtical slider Picture set.
 */
 #top { background: url(/images/kitsuki-kimono.gif) center center / cover no-repeat;}
 #sakura { background: url(/images/kitsuki-castle-sakura.gif) center center / cover no-repeat;}
@@ -110,7 +121,10 @@ Virtical slider by clicking event.
 #wasyoku { background: url(/images/kitsuki-wasyoku.gif) center center / cover no-repeat;}
 #onsen { background: url(/images/kitsuki-onsen.gif) center center / cover no-repeat;}
 
-.demo a {
+/*********************************
+Virtical slider Section set.
+*/
+.session_set a {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -124,16 +138,33 @@ Virtical slider by clicking event.
     text-decoration: none;
     transition: opacity .3s;
 }
-
-.demo a:hover {
+.session_set a:hover {
     opacity: .5;
 }
-  
-#top a {
+
+/*********************************
+Virtical slider for #top
+*/
+#top .up_a {
+    padding-top: 300px;
+}
+#top .down_a {
     padding-top: 60px;
 }
-
-#top a span {
+#top .up_allow{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    box-sizing: border-box;
+}
+#top .down_allow{
     position: absolute;
     top: 0;
     left: 50%;
@@ -146,12 +177,30 @@ Virtical slider by clicking event.
     transform: rotate(-45deg);
     box-sizing: border-box;
 }
-  
-#sakura a {
+
+/*********************************
+Virtical slider for #sakura
+*/
+#sakura .up_a {
+    padding-top: 300px;
+}
+#sakura .down_a {
     padding-top: 60px;
 }
-
-#sakura a span {
+#sakura .up_allow{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    box-sizing: border-box;
+}
+#sakura .down_allow{
     position: absolute;
     top: 0;
     left: 50%;
@@ -164,12 +213,30 @@ Virtical slider by clicking event.
     transform: rotate(-45deg);
     box-sizing: border-box;
 }
-  
-#tomaya  a {
+
+/*********************************
+Virtical slider for #tomaya
+*/
+#tomaya .up_a {
+    padding-top: 300px;
+}
+#tomaya .down_a {
     padding-top: 60px;
 }
-
-#tomaya a span {
+#tomaya .up_allow{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    box-sizing: border-box;
+}
+#tomaya .down_allow{
     position: absolute;
     top: 0;
     left: 50%;
@@ -181,13 +248,31 @@ Virtical slider by clicking event.
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
+}  
+
+/*********************************
+Virtical slider for #gyoko
+*/
+#gyoko .up_a {
+    padding-top: 300px;
 }
-  
-#gyoko a {
+#gyoko .down_a {
     padding-top: 60px;
 }
-
-#gyoko a span {
+#gyoko .up_allow{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    box-sizing: border-box;
+}
+#gyoko .down_allow{
     position: absolute;
     top: 0;
     left: 50%;
@@ -199,13 +284,31 @@ Virtical slider by clicking event.
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
+}  
+
+/*********************************
+Virtical slider for #wasyoku
+*/
+#wasyoku .up_a {
+    padding-top: 300px;
 }
-  
-#wasyoku a {
+#wasyoku .down_a {
     padding-top: 60px;
 }
-
-#wasyoku a span {
+#wasyoku .up_allow{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    box-sizing: border-box;
+}
+#wasyoku .down_allow{
     position: absolute;
     top: 0;
     left: 50%;
@@ -217,13 +320,31 @@ Virtical slider by clicking event.
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
+}  
+
+/*********************************
+Virtical slider for #onsen
+*/
+#onsen .up_a {
+    padding-top: 300px;
 }
-  
-#onsen  a {
+#onsen .down_a {
     padding-top: 60px;
 }
-
-#onsen a span {
+#onsen .up_allow{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    box-sizing: border-box;
+}
+#onsen .down_allow{
     position: absolute;
     top: 0;
     left: 50%;
@@ -235,4 +356,4 @@ Virtical slider by clicking event.
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
-}
+}  
