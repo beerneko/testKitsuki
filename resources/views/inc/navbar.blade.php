@@ -21,6 +21,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/askme"> &nbsp;  &nbsp; Ask Me</a>
             </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="posts/"> &nbsp;  &nbsp; Blog</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
