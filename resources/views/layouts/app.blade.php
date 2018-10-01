@@ -19,9 +19,11 @@
         <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     </body>
     <script>
-        CKEDITOR.replace( 'article-ckeditor' );
+        // laravel-ckeditors
+        CKEDITOR.replace('test');
     </script>
     <script type="text/javascript">
+        // Animation scroll by clicking span allow for page/index
         $(function() {
             $('a[href*=#]').on('click', function(e) {
                 e.preventDefault();

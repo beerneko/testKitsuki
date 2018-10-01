@@ -12,7 +12,7 @@
                             <div class="col-md-4 col-sm-4">
                                 <img style="max-height:90px;z-index:0;" src="/storage/cover_images/{{ $post->cover_image }}">
                             </div>
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-8 col-sm-8">
                                 <H3><a href="posts/{{ $post->id }}">{{ $post->title }}</a></H3>
                                 <small>Written on {{$post->created_at}} by {{ $post->user->name }}</small>
                             </div>

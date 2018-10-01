@@ -8,12 +8,10 @@
             <a href="/posts" class="btn btn-default btn-sm">Go Back</a>
             {{ Form::submit('Submit',['class'=>'btn btn-primary btn-sm']) }}
                 <div class="form-group">
-                    {{Form::label('title','Title', ['class' => 'label-post']) }}
-                    {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}
+                    {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title','maxlength' => 49 ])}}
                 </div>
-                <div class="btn btn-success" style="cursor: pointer;margin:2px !important;" onclick="$('#cke_1_top').hide('fast');">Editer Show / Hide</div>
                 <div class="form-group">
-                    {{ Form::textarea('body','',['id'=>'article-ckeditor','class'=>'form-control','placeholder'=>'Body Text'])}}
+                    {{ Form::textarea('body','',['id'=>'test','class'=>'form-control','placeholder'=>'Body Text'])}}
                 </div>
                 <div class="form-group">
                     {{ Form::file('cover_image')}}

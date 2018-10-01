@@ -10586,6 +10586,17 @@ Picture set.
   font-size: 125%;
 }
 
+.list-group-item img,
+.list-group-item p img {
+  width: auto !important;
+  height: 180px !important;
+}
+
+.form-control img {
+  width: auto !important;
+  height: 80px !important;
+}
+
 /*********************************
 Picture set.
 */
@@ -10608,7 +10619,12 @@ Picture set.
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #3b3b2c;
+}
+
+.hero-post form {
+  background-color: #2a2b3369;
+  padding: 1em;
+  color: #fff;
 }
 
 /*********************************
