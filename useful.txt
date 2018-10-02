@@ -1,0 +1,208 @@
+***add access path to Bush in Windows. It'll give "node_module"
+
+if [ -f ~/.bashrc ] ; then
+. ~/.bashrc
+fi
+
+
+***clear cashe
+CTL + F5
+
+***Compile Css
+npm run dev
+
+***Compile Css constantry
+npm run watch 
+
+***end 
+CTL+C
+
+*** create database at phpmyadmin (LSAPP)
+*** create a model ("-m" create the migration database file, this is just like Hibonate for Java)
+php artisan make:model Post -m
+*** if you only createe migration file without model, 
+php artisan make:migration add_cover_image_to_posts
+
+*** database
+*** find password w/ phpmyadmin
+1.open Xampp server, brows phpmyadmin.
+2.open user
+3.see "root" -> user, "localhost". 
+4.edit the "localhost"
+5.chenge password, and hit "go" key
+6.go to C:\xampp\phpMyAdmin\config.inc.php
+7.change:
+/* Authentication type and info */
+
+$cfg['Servers'][$i]['auth_type'] = 'cookie'; ->koko
+
+$cfg['Servers'][$i]['user'] = 'YourUsername'; ->koko
+
+$cfg['Servers'][$i]['password'] = 'YourP@ssword'; ->koko
+
+$cfg['Servers'][$i]['extension'] = 'mysqli';
+
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
+
+$cfg['Lang'] = '';
+
+
+*** find mysql password without phpmyadmin
+1.Stop mysql from Service
+2. create note file and write;
+	USE mysql;
+	UPDATe mysql.user SET Password = PASSWORD('12345') WHERE User = 'YourUsername';
+	FLUSH PRIVELEGES;
+
+*** edit create table area
+            $table->increments('id');
+            $table->string('title');
+            $table->mediumText('body');
+            $table->timestamps();
+
+*** edit Providers/AppSeviceProvider.php for string length error
+
+use Illuminate\Support\Facades\Schema; ->add
+
+        Schema::defaultStringLength(191); ->add at the boot()
+
+*** create table via Artisan
+php artisan migrate
+
+*** you can use Tinker to add some initial data. you can add with other ways also.
+
+php artisan tinker
+->for count
+	App\Post::count()
+->for set variable, create new instance
+	$post = new App\Post();
+->for add title field
+	$post->title = 'Post one'
+->for add body field
+	$post->body = 'This is the post body';
+->for save
+	$post->save();
+
+*** create controller (--resource is for adding index,create,store,show,edit,update,destroy)
+php artisan make:controller PostsController --resource
+
+*** so all of the resources needed to be route.
+php artisan route:list
+
+*** correct image address. public/images/beer.jpb
+
+
+*** after push to origin, it'd have the auto-loader issue
+
+Just in case I trip over this error in 2 weeks again... My case: Checkout an existing project via git and pull in all dependencies via composer. Came down to the same error listed within the title of this post.
+
+Solution:
+
+composer dump-autoload
+composer install --no-scripts
+make sure everything works now as expected (no errors!)
+
+composer update
+
+*** after push to origin, it'd have the npm run dev/watch issue -- I guess it'd be lost by same reason for auto-loader. 
+You need to make cross-env working globally instead of having it in the project.
+
+1) remove node_modules folder
+
+2) run
+
+npm install --global cross-env
+
+3) remove "cross-env": "^5.0.1", from package.json file devDependencies section. Actually, you can skip this step and keep package.json intact. If you prefer.
+
+4) run
+
+npm install --no-bin-links
+
+5) run
+
+npm run dev
+
+and see it working
+
+P.S Tested on Windows 10 with Laravel-5.4
+
+P.P.S Windows 10 with Laravel-5.6 does not have this problem, thus updating is an alternative solution.
+
+*** How do I discard unstaged changes in Git?
+For all changes -> git checkout -- .
+For specifics changes -> git checkout path/to/file/to/revert
+Also... -> git clean -df
+
+*** "warning: LF will be replaced by CRLF" needs to be fixed by....the below
+git config --global core.autoCRLF false
+
+*** If you want to check changes before "PULL" or "PUSH"
+git diff HEAD..origin/002kitsuki
+
+*** Trying to get property 'created_at' of non-object (View: C:\xampp\htdocs\triptokitsuki\resources\views\posts\show.blade.php)
+*** ...but it ended up a cause which I misspelled.
+Another way is to use optional() method and instead using 
+
+$surveys->id 
+you would be using 
+optional($surveys)->id
+
+The optional function accepts any argument and allows you to access properties or call methods on that object. If the given object is null, properties and methods will return null instead of causing an error:
+
+*** Create Upload storage by linking to storage/app/public -> public/sorage
+php artisan storage:link 
+
+*** CSRF
+If you use Form::open() it's automatically add csrf field to your form. And you don't need to use csrf_token() helper function.
+
+if you use <form> use
+
+@csrf
+
+*** this is so stupid... but you know when you need to change Vender config such as CKeditor, you need to go to html. Becuase it's extarnally pathable, not like resource link folder... it took me two days... em stupid...
+
+public/vendor/unisharp/laravel-checkeditor/config.js
+
+not this.
+vendor/unisharp/laravel-checkeditor/config.js
+
+
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+*********** Create clone environment at the local machine
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+
+1.Clone your project
+2.G.o to the folder application using cd command on your cmd or terminal
+3.Run composer install on your cmd or terminal
+4.Copy .env.example file to .env on the root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal, Ubuntu
+5.Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration. 
+6.By default, the username is root and you can leave the password field empty or you need to configurate user root pass word as is explained eariler. (This is for Xampp) 
+7.By default, the username is root and password is also root. (This is for Lamp)
+8.Run php artisan key:generate
+9.Run php artisan migrate
+(Run php artisan serve-you don't need)
+Go to localhost:8000
+
+*** for vhost.
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/lsapp/public"
+    ServerName lsapp.com
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/triptokitsuki/public"
+    ServerName triptokitsuki.com
+</VirtualHost>
+
+*** for driver
+127.0.0.1       localhost
+127.0.0.1       lsapp.com
+127.0.0.1       triptokitsuki.com
