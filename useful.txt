@@ -1,3 +1,9 @@
+
+***install node_modules if it's new computer
+    add "Path" from windows system, "C:\Program Files\nodejs\"
+    Run node -v
+    npm install
+
 ***add access path to Bush in Windows. It'll give "node_module"
 
 if [ -f ~/.bashrc ] ; then
@@ -94,7 +100,7 @@ php artisan route:list
 
 *** after push to origin, it'd have the auto-loader issue
 
-Just in case I trip over this error in 2 weeks again... My case: Checkout an existing project via git and pull in all dependencies via composer. Came down to the same error listed within the title of this post.
+Just in case I triped over this error in 2 weeks again... My case: Checkout an existing project via git and pull in all dependencies via composer. Came down to the same error listed within the title of this post.
 
 Solution:
 
@@ -123,7 +129,7 @@ npm install --no-bin-links
 
 npm run dev
 
-and see it working
+and see it's working
 
 P.S Tested on Windows 10 with Laravel-5.4
 
@@ -183,6 +189,16 @@ vendor/unisharp/laravel-checkeditor/config.js
 7.By default, the username is root and password is also root. (This is for Lamp)
 8.Run php artisan key:generate
 9.Run php artisan migrate
+10.php artisan storage:link
+11.npm install --no-bin-links
+12.add laravel blade snippets
+    Ctr+p then type "ext install laravel blade"
+    pick "Laravel Blade snippets"
+13.install node_modules if it's new computer
+    add "Path" from windows system, "C:\Program Files\nodejs\"
+    Run node -v
+    npm install
+
 (Run php artisan serve-you don't need)
 Go to localhost:8000
 
@@ -206,3 +222,129 @@ Go to localhost:8000
 127.0.0.1       localhost
 127.0.0.1       lsapp.com
 127.0.0.1       triptokitsuki.com
+
+*****************************************************************************************************************************************
+*****************************************************************************************************************************************
+*********** Publish
+*****************************************************************************************************************************************
+*****************************************
+************************************************************************************************
+
+1.use putty or FTP
+
+2.edit index.php to point the vendor and bootstrap
+
+-- If you already developed your application on local , you can zip your files and upload them to your Cpanel using FTP or the uploader thru file manager.
+2-1.Create a new folder in your public_html and rename it for example : blog
+2-2.Upload your zip and extract all your files .
+2-3.Now you must move your public folder to public_html
+2-4.Now we should go to our folder public and edit index.php
+    require __DIR__.'/../blogf/bootstrap/autoload.php';
+    $app = require_once __DIR__.'/../blogf/bootstrap/app.php';
+-- If you visit your link now , you’ll face HTTP Error 403 — Forbidden .
+Just create an .htaccess file in your public_html and pass this :
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^blog
+RewriteRule ^(.*)$ blog/$1 [L]
+
+-- if the error comes as the below:
+PHP Parse error:  syntax error, unexpected '?' in /home/yurikobingman/public_html/triptokitsuki/vendor/symfony/http-foundation/Response.php
+-> you need to upgrade the hosting site php version to later than 7.0
+    Usually you can switch at cPanel.
+
+-- if the error comes as the below:
+PHP Fatal error:  require_once(): Failed opening required '/home/username/public_html/public/bootstrap/app.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/username/public_html/public/index.php
+-> probably your public/index.php points wrong.
+-> check with the PHP code
+    <html><body><h1>/public_html/public/index.php</h1></body></html>
+
+// this is you want to point -> "/public_html/triptokitsuki/vendor/"
+<p>php starts</p>
+<?php
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
+ */
+
+define('LARAVEL_START', microtime(true));
+
+require __DIR__.'/../triptokitsuki/vendor/autoload.php';
+// current directory
+// if you see the current directory, the require gets correct hierarchy. 
+echo getcwd() . "\n";
+
+?>
+<p>php goal</p>
+</body></html>
+
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our classes later on. It feels great to relax.
+|
+*/
+require __DIR__.'/../triptokitsuki/vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let us turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight our users.
+|
+*/
+
+ $app = require_once __DIR__.'/../triptokitsuki/bootstrap/app.php';
+
+3.
+Login to your SSH account and Install composer using these 4 commands
+(use Putty or VS code bush for windows)
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+if it says "couldn't fine composer-set.php", then go to the correct directry where you uploaded from local with composer.
+then, "composer update" to update.(or composer install if it's the first time.)
+
+4.
+To verify that composer has been installed on your server , you can check the version :
+
+composer --version
+
+5.
+For Database :
+
+1 / Update your .env file .
+
+2 / Create a database and user (Link them) .
+
+3 / Run php artisan migrate (It’s working on goddady now) .
+
+--If you want to install node in your server : (we can use nvm )
+Login to your SSH and type this command :
+
+wget -qO- https://cdn.rawgit.com/creationix/nvm/master/install.sh | bash
+
+run this command in order to be able to use it :
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+nvm install node
+
+
+*** if your Symlink doesn't work...
+1. use ssh bush to connect and set public or puclic_html then delete storage where you want to like to;
+rm storage
+2. go to where the artisan project and create symlink manually. Adjust directory hierarchy by hand.
+ln -s /home/yurikobingman/triptokitsuki/storage/app/public/cover_images /home/yurikobingman/public_html/storage/cover_images
+3. update for symlink
+ln -sf /home/yurikobingman/triptokitsuki/storage/app/public/cover_images /home/yurikobingman/public_html/storage/cover_images
