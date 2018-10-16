@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="hero-image">
-        <div class="hero-post">
+        <div class="hero-post w-75 mt-5 p-3 h-75 d-inline-block">
             <div class="list-group">
                 <div class="list-group-item">
                     <a href="/posts" class="btn btn-default btn-sm">Go Back</a>
