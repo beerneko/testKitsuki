@@ -18,7 +18,8 @@
                             {{ Form::file('cover_image',array('id' => 'photo','style'=>'display:none;'))}}
                         </td>
                         <td class="w-25 p-3 align-bottom">
-                            <img src="/storage/cover_images/noimage.png" id="img" class="img align-bottom border border-dark" style="max-height:15vw; margin:0 3px;">
+                            {{-- <img src="/storage/cover_images/noimage.png" id="img" class="img align-bottom border border-dark" style="max-height:15vw; margin:0 3px;"> --}}
+                            <img src="/storage/cover_images/{{ $post->cover_image }}" id="img" class="img align-bottom border border-dark" style="max-height:15vw; margin:0 3px;">
                         </td>
                     </tr>
                 </table>
