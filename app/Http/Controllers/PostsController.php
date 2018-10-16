@@ -26,7 +26,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at','asc')->paginate(3);
+        $posts = Post::orderBy('created_at','dsc')->paginate(3);
         return view('posts.index')->with('posts',$posts);
     }
 
@@ -67,7 +67,7 @@ class PostsController extends Controller
             //Upload image
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
         }else{
-            $fileNameToStore = 'noimage.jpg';
+            $fileNameToStore = 'noimage.png';
         }
 
         //create post
