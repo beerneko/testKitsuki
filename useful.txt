@@ -146,6 +146,28 @@ git config --global core.autoCRLF false
 *** If you want to check changes before "PULL" or "PUSH"
 git diff HEAD..origin/002kitsuki
 
+***show only file names that were changed
+git diff HEAD..origin/004kitsuki --name-only
+
+*** how to see log in oneline
+git log --pretty=oneline
+
+*** how to see remote log
+git log origin/master
+
+*** after "fetch", then you can try on local
+git checkout origin/remote_branch_name
+
+*** after "fetch", if you want to merge it, 
+git merge origin/remote_branch_name
+
+git fetch でリモートのコミットを取得する
+git log または git checkout でそれらのコミット内容を確認する
+git merge でそれらのコミットを現在のブランチにマージする
+
+
+
+
 *** Trying to get property 'created_at' of non-object (View: C:\xampp\htdocs\triptokitsuki\resources\views\posts\show.blade.php)
 *** ...but it ended up a cause which I misspelled.
 Another way is to use optional() method and instead using 

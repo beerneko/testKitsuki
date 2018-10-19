@@ -27,9 +27,26 @@
         $(function() {
             $('a[href*=#]').on('click', function(e) {
                 e.preventDefault();
-                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top -55
+                }, 1200, 'linear');
             });
         });
     </script>
-
+    <script type="text/javascript">
+        $("#testbrows").on('click', function(e){
+            $("#photo").click();
+        })
+        $("#photo").on('change', function(e){
+            var fileInput=this;
+            if (fileInput.files[0])
+            {
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $("#img").attr('src', e.target.result);
+                }
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        })
+    </script>
 </html>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         {{-- <a class="navbar-brand" href="/"><H1>{{config('app.name'),'TripToKitsuki'}}</H1></a> --}}
-        <a href="/" class="navbar-left"><img src="../images/logo.png" height="50px"></a>
+        <a href="/" class="navbar-left"><img src="http://www.triptokitsuki.com/images/logo.png" height="50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
