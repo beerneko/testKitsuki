@@ -370,3 +370,34 @@ rm storage
 ln -s /home/yurikobingman/triptokitsuki/storage/app/public/cover_images /home/yurikobingman/public_html/storage/cover_images
 3. update for symlink
 ln -sf /home/yurikobingman/triptokitsuki/storage/app/public/cover_images /home/yurikobingman/public_html/storage/cover_images
+
+
+/** 
+I wrote a lot of junks here for how to deploy your laravel... it's completely meaningless, sorry.
+what you need is...
+1. install composer at the your top directory (your_user_name_for_ssh@xxxxx[~]$)
+your_user_name_for_ssh@xxxxx[~]$ wget https://getcomposer.org/installer
+then, "installer" will pop up at your directory
+2. check if there is no conplecations.
+your_user_name_for_ssh@xxxxx[~]$ php installer --check
+then, if it's OKay, 
+3. install it
+your_user_name_for_ssh@xxxxx[~]$ php installer
+4. delete the "installer"
+your_user_name_for_ssh@xxxxx[~]$ rm -f installer
+5. use composer to create new project
+your_user_name_for_ssh@xxxxx[~]$ php composer.phar create-project laravel/laravel --prefer-defaultStringLength
+6. make backup for original "public_html" from cPanel
+7. delete original "public_html"
+your_user_name_for_ssh@xxxxx[~]$ rm -rf public_html
+8. create symlink for laravel/public to public_html, so it require the Cpanel to route to laravel/public
+your_user_name_for_ssh@xxxxx[~]$ ln -s laravel/public public_html
+9. Now, what, you need to change your env file and other package info at the service.php fo r the prod.
+
+oh, my gosh... isn't that so easy???
+
+
+
+
+
+**/
