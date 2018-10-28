@@ -388,17 +388,17 @@ Fixed menu block for index page.
 floating manu body
 */
   .floating-menu {
-    border-top: solid 3px red;
+    border-top: solid 3px #fff;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    border-bottom: solid 1px red;
+    border-bottom: solid 1px #fff;
     font-family: sans-serif;
     background: #060606;
-    padding:8px;
+    padding: 8px;
     margin: 8px 2px;
     width: 15vw;
     z-index: 1000 !important;
     min-width: 150px;
-    top: 45%;
+    top: 50%;
     right: 0;
     transform: translate(-50%, -50%);
     position: fixed;
@@ -421,7 +421,7 @@ floating manu animation
 }
 @keyframes floating-Animation {
     50% {
-        background-color: rgba(240, 234, 200, 0.527);
+        background-color: #6c757d;
         font-size: 4em;
         text-shadow: 1px 2px 1px #fff;
     }
