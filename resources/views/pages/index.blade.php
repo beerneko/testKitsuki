@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@include('inc.stickymenu')
+
 @section('content')
     <section id="top" class="section_set">
         <a href="#onsen" class="up_a"><span class="up_allow"></span></a>
