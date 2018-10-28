@@ -396,6 +396,25 @@ your_user_name_for_ssh@xxxxx[~]$ ln -s laravel/public public_html
 
 oh, my gosh... isn't that so easy???
 
+...AND THEN!!!
+Do not foget about adding new symlink!
+
+Go to /public directory and run:
+
+rm storage
+
+Go to Laravel root directory and run:
+
+php artisan storage:link
+
+
+[This is why...]
+This problem comes when laravel project is moved/copied to some other folder.
+The storage link is still there thus causing the exception error. 
+public/storage folder exists and points to wrong location and it needs to be deleted with rm storage command.
+After that run php artisan storage:link in terminal and it will create the storage link.
+******This needs to be done EVERY time when laravel is moved/copied/deployed!*****
+
 
 
 

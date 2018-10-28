@@ -57,6 +57,7 @@
                                     {{ __('Login') }}
                                 </button>
                                 <a href="{{ url('/redirect') }}" class="btn btn-primary">Login With Google</a>
+                                <a class="btn btn-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
