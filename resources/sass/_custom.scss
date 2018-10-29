@@ -10,6 +10,48 @@ html, body {
 blockquote{
     border-left: 0px !important;
 }
+  
+H3 a, H3 a:visited {
+    color: #060b0f !important;
+}
+
+H3 a:hover, H3 a:active {
+    color: #060b0f !important;
+}
+
+/*********************************
+Bootstrap Navigation bar custamized.
+*/
+ul.nav li.active a {
+    color: #742e06 !important;
+}
+
+.nav-link{
+    font-size: 150%;
+}
+
+.navbar-brand{
+    font-size: 35px !important;
+}
+
+/*********************************
+/*********************************
+Post cosmetic part.
+/*********************************
+Picture set.
+*/
+form{
+    padding:3px !important;
+    background-color: #ffffffad; 
+}
+
+.form-check input {
+    margin:4px 0 0 -10px !important;
+}
+
+/*********************************
+Index page seciton set.
+*/
 
 section {
     position: relative;
@@ -52,44 +94,6 @@ section .centertext p {
     font-size: 15px;
     text-align: left;
 }
-  
-H3 a, H3 a:visited {
-    color: #060b0f !important;
-}
-
-H3 a:hover, H3 a:active {
-    color: #060b0f !important;
-}
-
-/*********************************
-Bootstrap Navigation bar custamized.
-*/
-ul.nav li.active a {
-    color: #742e06 !important;
-}
-
-.nav-link{
-    font-size: 150%;
-}
-
-.navbar-brand{
-    font-size: 35px !important;
-}
-
-/*********************************
-/*********************************
-Post cosmetic part.
-/*********************************
-Picture set.
-*/
-form{
-    padding:3px !important;
-    background-color: #ffffffad; 
-}
-
-.form-check input {
-    margin:4px 0 0 -10px !important;
-}
 
 /*********************************
 Picture set.
@@ -102,7 +106,6 @@ Picture set.
     background-position: center;
     background-repeat: repeat-y;
     background-size: cover;
-    // position: relative;
 }
  
 .hero-post {
@@ -127,263 +130,7 @@ Virtical slider Picture set.
 #onsen { background: url(/images/kitsuki-onsen.gif) center center / cover no-repeat;}
 
 /*********************************
-Virtical slider Section set.
-*/
-.section_set a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    font : normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-}
-.section_set a:hover {
-    opacity: .5;
-}
-
-/*********************************
-Virtical slider for #top
-*/
-#top .up_a {
-    padding-top: 300px;
-}
-#top .down_a {
-    padding-top: 60px;
-}
-#top .up_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #43f829;
-    border-bottom: 1px solid #43f829;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    box-sizing: border-box;
-}
-#top .down_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #43f829;
-    border-bottom: 1px solid #43f829;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}
-
-/*********************************
-Virtical slider for #sakura
-*/
-#sakura .up_a {
-    padding-top: 300px;
-}
-#sakura .down_a {
-    padding-top: 60px;
-}
-#sakura .up_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #f64ec5;
-    border-bottom: 1px solid #f64ec5;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    box-sizing: border-box;
-}
-#sakura .down_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #f64ec5;
-    border-bottom: 1px solid #f64ec5;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}
-
-/*********************************
-Virtical slider for #tomaya
-*/
-#tomaya .up_a {
-    padding-top: 300px;
-}
-#tomaya .down_a {
-    padding-top: 60px;
-}
-#tomaya .up_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    box-sizing: border-box;
-}
-#tomaya .down_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}  
-
-/*********************************
-Virtical slider for #gyoko
-*/
-#gyoko .up_a {
-    padding-top: 300px;
-}
-#gyoko .down_a {
-    padding-top: 60px;
-}
-#gyoko .up_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    box-sizing: border-box;
-}
-#gyoko .down_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}  
-
-/*********************************
-Virtical slider for #wasyoku
-*/
-#wasyoku .up_a {
-    padding-top: 300px;
-}
-#wasyoku .down_a {
-    padding-top: 60px;
-}
-#wasyoku .up_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #eaff26;
-    border-bottom: 1px solid #eaff26;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    box-sizing: border-box;
-}
-#wasyoku .down_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #eaff26;
-    border-bottom: 1px solid #eaff26;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}  
-
-/*********************************
-Virtical slider for #onsen
-*/
-#onsen .up_a {
-    padding-top: 300px;
-}
-#onsen .down_a {
-    padding-top: 60px;
-}
-#onsen .up_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #151516;
-    border-bottom: 1px solid #151516;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    box-sizing: border-box;
-}
-#onsen .down_allow{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #151516;
-    border-bottom: 1px solid #151516;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-}  
-  main {
-    margin-bottom: 200%;
-  }
-  .floating-menu {
-    font-family: sans-serif;
-    background: yellowgreen;
-    padding: 5px;;
-    width: 130px;
-    z-index: 100;
-    position: fixed;
-  }
-  .floating-menu a, 
-  .floating-menu h3 {
-    font-size: 0.9em;
-    display: block;
-    margin: 0 0.5em;
-    color: white;
-  }
-
-/*********************************
-/*********************************
-Fixed menu block for index page.
+Sticky Fixed menu block for index page.
 /*********************************
 floating manu body
 */
@@ -393,24 +140,21 @@ floating manu body
     border-bottom: solid 1px #fff;
     font-family: sans-serif;
     background: #060606;
-    padding: 8px;
-    margin: 8px 2px;
-    width: 35vw;
+    padding: 3px;
+    width:100%;
     z-index: 1000 !important;
-    min-width: 100px;
-    top: 20vh;
-    right: 0;
-    transform: translate(-5%, -15%);
+    top: 14vh;
+    left: 0;
     position: fixed;
   }
 /*********************************
 floating manu font
 */
 .floating-menu a, .floating-menu h3 {
-    font-size: 0.9em;
+    font-size: 0.7em;
     display: block;
-    margin: 0 0.7em;
-    color: #6c757d;
+    margin: 0 0.5em;
+    color: #8e98a0;
   }
 /*********************************
 floating manu animation
@@ -421,7 +165,7 @@ floating manu animation
 }
 @keyframes floating-Animation {
     50% {
-        background-color: #6c757d;
+        background-color: #8e98a0;
         font-size: 4em;
         text-shadow: 1px 2px 1px #fff;
     }
@@ -433,14 +177,14 @@ floating manu animation
 .floating-menu a:visited, 
 .floating-menu a:hover, 
 .floating-menu a:active { 
-    color:#6c757d; 
+    color:#8e98a0; 
     text-decoration: none !important;
 }
 .floating-menu span a:link, 
 .floating-menu span a:visited, 
 .floating-menu span a:hover, 
 .floating-menu span a:active { 
-    color:#6c757d; 
+    color:#8e98a0; 
     text-decoration: none !important;
 }
 .floating-menu a:hover, 

@@ -1,3 +1,8 @@
+<style>
+.nav>li>a {
+    padding: 10px 15px !important;
+}
+</style>
 <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         {{-- <a class="navbar-brand" href="/"><H1>{{config('app.name'),'TripToKitsuki'}}</H1></a> --}}
