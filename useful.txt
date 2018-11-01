@@ -165,7 +165,14 @@ git fetch でリモートのコミットを取得する
 git log または git checkout でそれらのコミット内容を確認する
 git merge でそれらのコミットを現在のブランチにマージする
 
+*** eliminate commit with hard -> BE AWARE!!! it'll delete all changes and files!!!
+git reset --hard HEAD^
 
+*** eliminate commit with soft -> the changes stay same.
+git reset --soft HEAD^
+
+*** GIT no longer auto added upstream branch name.
+git push --set-upstream origin 006kitsuki_fix
 
 
 *** Trying to get property 'created_at' of non-object (View: C:\xampp\htdocs\triptokitsuki\resources\views\posts\show.blade.php)
