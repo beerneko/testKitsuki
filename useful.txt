@@ -140,8 +140,10 @@ For all changes -> git checkout -- .
 For specifics changes -> git checkout path/to/file/to/revert
 Also... -> git clean -df
 
-*** "warning: LF will be replaced by CRLF" needs to be fixed by....the below
+*** "warning: LF will be replaced by CRLF" needs to be fixed by....the below 
+*** because it's defferences between Linux and windows line representation.
 git config --global core.autoCRLF false
+git config core.autocrlf true
 
 *** If you want to check changes before "PULL" or "PUSH"
 git diff HEAD..origin/002kitsuki

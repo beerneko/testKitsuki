@@ -25,9 +25,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/youcanlist"> &nbsp;  &nbsp; Things you can do</a>
             </li> --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="/askme"> &nbsp;  &nbsp; Ask Me</a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                     <a class="nav-link" href="/posts"> &nbsp;  &nbsp; Blog</a>
                 </li>
@@ -68,3 +68,4 @@
             </div>
     </div>
 </nav>
+
