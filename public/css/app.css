@@ -10492,48 +10492,6 @@ blockquote {
   border-left: 0px !important;
 }
 
-section {
-  position: relative;
-  width: 100%;
-  height: 102%;
-}
-
-section::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 80%;
-}
-
-section .centertext {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 10px;
-  z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(95%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 95%, rgba(0, 0, 0, 0.5) 100%);
-}
-
-section .centertext h1 {
-  color: #fff;
-  font-family: 'Tangerine', serif;
-  font-size: 64px;
-  white-space: nowrap;
-}
-
-section .centertext p {
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  text-align: left;
-}
-
 H3 a,
 H3 a:visited {
   color: #060b0f !important;
@@ -10574,6 +10532,59 @@ form {
 
 .form-check input {
   margin: 4px 0 0 -10px !important;
+}
+
+/*********************************
+Index page seciton set.
+*/
+
+section {
+  position: relative;
+  width: 100%;
+  height: 102%;
+}
+
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+}
+
+section .centertext {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  padding: 10px;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(95%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 95%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+section .centertext h1 {
+  color: #fff;
+  font-family: 'Tangerine', serif;
+  white-space: nowrap;
+}
+
+section .centertext p {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+section .centertext small {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  text-align: left;
 }
 
 /*********************************
@@ -10629,308 +10640,14 @@ Virtical slider Picture set.
   background: url(/images/kitsuki-onsen.gif) center center/cover no-repeat;
 }
 
-/*********************************
-Virtical slider Section set.
-*/
-
-.section_set a {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  z-index: 2;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: #fff;
-  font: normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
-  text-decoration: none;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
-
-.section_set a:hover {
-  opacity: .5;
+#map {
+  background: url(/images/kitsukiyoru.jpg) center center/cover no-repeat;
 }
 
 /*********************************
-Virtical slider for #top
-*/
-
-#top .up_a {
-  padding-top: 300px;
-}
-
-#top .down_a {
-  padding-top: 60px;
-}
-
-#top .up_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #43f829;
-  border-bottom: 1px solid #43f829;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#top .down_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #43f829;
-  border-bottom: 1px solid #43f829;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+Sticky Fixed menu block for index page.
 /*********************************
-Virtical slider for #sakura
-*/
-
-#sakura .up_a {
-  padding-top: 300px;
-}
-
-#sakura .down_a {
-  padding-top: 60px;
-}
-
-#sakura .up_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #f64ec5;
-  border-bottom: 1px solid #f64ec5;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#sakura .down_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #f64ec5;
-  border-bottom: 1px solid #f64ec5;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*********************************
-Virtical slider for #tomaya
-*/
-
-#tomaya .up_a {
-  padding-top: 300px;
-}
-
-#tomaya .down_a {
-  padding-top: 60px;
-}
-
-#tomaya .up_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#tomaya .down_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*********************************
-Virtical slider for #gyoko
-*/
-
-#gyoko .up_a {
-  padding-top: 300px;
-}
-
-#gyoko .down_a {
-  padding-top: 60px;
-}
-
-#gyoko .up_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#gyoko .down_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*********************************
-Virtical slider for #wasyoku
-*/
-
-#wasyoku .up_a {
-  padding-top: 300px;
-}
-
-#wasyoku .down_a {
-  padding-top: 60px;
-}
-
-#wasyoku .up_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #eaff26;
-  border-bottom: 1px solid #eaff26;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#wasyoku .down_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #eaff26;
-  border-bottom: 1px solid #eaff26;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*********************************
-Virtical slider for #onsen
-*/
-
-#onsen .up_a {
-  padding-top: 300px;
-}
-
-#onsen .down_a {
-  padding-top: 60px;
-}
-
-#onsen .up_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #151516;
-  border-bottom: 1px solid #151516;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#onsen .down_allow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #151516;
-  border-bottom: 1px solid #151516;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main {
-  margin-bottom: 200%;
-}
-
-.floating-menu {
-  font-family: sans-serif;
-  background: yellowgreen;
-  padding: 5px;
-  width: 130px;
-  z-index: 100;
-  position: fixed;
-}
-
-.floating-menu a,
-.floating-menu h3 {
-  font-size: 0.9em;
-  display: block;
-  margin: 0 0.5em;
-  color: white;
-}
-
-/*********************************
-/*********************************
-Fixed menu block for index page.
-/*********************************
-floating manu body
+floating menu body
 */
 
 .floating-menu {
@@ -10940,28 +10657,24 @@ floating manu body
   border-bottom: solid 1px #fff;
   font-family: sans-serif;
   background: #060606;
-  padding: 8px;
-  margin: 8px 2px;
-  width: 15vw;
+  padding: 3px;
+  width: 100%;
   z-index: 1000 !important;
-  min-width: 150px;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 14vh;
+  left: 0;
   position: fixed;
 }
 
 /*********************************
-floating manu font
+floating menu font
 */
 
 .floating-menu a,
 .floating-menu h3 {
-  font-size: 0.9em;
+  font-size: 0.7em;
   display: block;
-  margin: 0 0.7em;
-  color: #6c757d;
+  margin: 0 0.5em;
+  color: #8e98a0;
 }
 
 /*********************************
@@ -10970,13 +10683,12 @@ floating manu animation
 
 .floating-animate {
   color: #f70f0f;
-  -webkit-animation: floating-Animation 3s ease 1s 1 alternate forwards;
-          animation: floating-Animation 3s ease 1s 1 alternate forwards;
+  -webkit-animation: floating-Animation 1s ease 1s 1 alternate forwards;
+          animation: floating-Animation 1s ease 1s 1 alternate forwards;
 }
 
 @-webkit-keyframes floating-Animation {
   50% {
-    background-color: #6c757d;
     font-size: 4em;
     text-shadow: 1px 2px 1px #fff;
   }
@@ -10988,7 +10700,6 @@ floating manu animation
 
 @keyframes floating-Animation {
   50% {
-    background-color: #6c757d;
     font-size: 4em;
     text-shadow: 1px 2px 1px #fff;
   }
@@ -11002,7 +10713,7 @@ floating manu animation
 .floating-menu a:visited,
 .floating-menu a:hover,
 .floating-menu a:active {
-  color: #6c757d;
+  color: #8e98a0;
   text-decoration: none !important;
 }
 
@@ -11010,7 +10721,7 @@ floating manu animation
 .floating-menu span a:visited,
 .floating-menu span a:hover,
 .floating-menu span a:active {
-  color: #6c757d;
+  color: #8e98a0;
   text-decoration: none !important;
 }
 
@@ -11018,5 +10729,149 @@ floating manu animation
 .floating-menu span a:hover {
   color: #fff;
   text-decoration: none !important;
+}
+
+/*********************************
+Video section for index page.
+/*********************************
+/* Style the video: 100% width and height to cover the entire window */
+
+section #myVideo {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100% !important;
+}
+
+/* Add some content at the bottom of the video/page */
+
+section .content {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  padding: 10px;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(95%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 95%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/*********************************
+Footer section for index page.
+/*********************************
+/* fixed footer */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/*********************************
+video section slider for index page.
+/*********************************
+ /*Time to apply widths for accordian to work
+Width of image = 640px
+total images = 5
+so width of hovered image = 640px
+width of un-hovered image = 40px - you can set this to anything
+so total container width = 640 + 40*4 = 800px;
+default width = 800/5 = 160px;
+*/
+
+.accordian {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 805px;
+  height: 320px;
+  overflow: hidden;
+  /*Time for some styling*/
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+
+.accordian ul {
+  width: 1200px;
+  /*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+  position: relative;
+  display: block;
+  width: 160px;
+  float: left;
+  border-left: 1px solid #888;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  /*Transitions to give animation effect*/
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+
+.accordian ul:hover li {
+  width: 40px;
+}
+
+/*Lets apply hover effects now*/
+
+/*The LI hover style should override the UL hover style*/
+
+.accordian ul li:hover {
+  width: 640px;
+}
+
+.accordian li img {
+  display: block;
+}
+
+/*Image title styles*/
+
+.image_title {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 640px;
+}
+
+.image_title a:link,
+.image_title a:visited,
+.image_title a:hover,
+.image_title a:active {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 3vh;
+  padding-bottom: 15vh;
+  font-size: 2vh;
 }
 

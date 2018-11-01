@@ -140,8 +140,10 @@ For all changes -> git checkout -- .
 For specifics changes -> git checkout path/to/file/to/revert
 Also... -> git clean -df
 
-*** "warning: LF will be replaced by CRLF" needs to be fixed by....the below
+*** "warning: LF will be replaced by CRLF" needs to be fixed by....the below 
+*** because it's defferences between Linux and windows line representation.
 git config --global core.autoCRLF false
+git config core.autocrlf true
 
 *** If you want to check changes before "PULL" or "PUSH"
 git diff HEAD..origin/002kitsuki
@@ -165,7 +167,14 @@ git fetch でリモートのコミットを取得する
 git log または git checkout でそれらのコミット内容を確認する
 git merge でそれらのコミットを現在のブランチにマージする
 
+*** eliminate commit with hard -> BE AWARE!!! it'll delete all changes and files!!!
+git reset --hard HEAD^
 
+*** eliminate commit with soft -> the changes stay same.
+git reset --soft HEAD^
+
+*** GIT no longer auto added upstream branch name.
+git push --set-upstream origin 006kitsuki_fix
 
 
 *** Trying to get property 'created_at' of non-object (View: C:\xampp\htdocs\triptokitsuki\resources\views\posts\show.blade.php)

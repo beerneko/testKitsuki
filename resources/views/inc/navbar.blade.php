@@ -1,3 +1,8 @@
+<style>
+.nav>li>a {
+    padding: 10px 15px !important;
+}
+</style>
 <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         {{-- <a class="navbar-brand" href="/"><H1>{{config('app.name'),'TripToKitsuki'}}</H1></a> --}}
@@ -20,9 +25,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/youcanlist"> &nbsp;  &nbsp; Things you can do</a>
             </li> --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="/askme"> &nbsp;  &nbsp; Ask Me</a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                     <a class="nav-link" href="/posts"> &nbsp;  &nbsp; Blog</a>
                 </li>
@@ -63,3 +68,4 @@
             </div>
     </div>
 </nav>
+
