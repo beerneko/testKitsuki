@@ -1,6 +1,6 @@
 <p align="center"><img src="http://www.triptokitsuki.com/images/logo.png"></p>
 
-## About https://www.TripToKitsuki.com
+## About Trip To Kitsuki.com
 
 Created website for Kitsuki city in Japan
 For learning the Laravel Framework as my new proficiency. Took an opportunity for making a introducing site for Kitsuki city in Japan. 
