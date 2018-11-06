@@ -25,6 +25,6 @@ Tools:
 Currently Beerneko is looking for a Web application programmer position in Fort Worth, Tx or any other commutable area. 
 Beerneko is a Full-Stack Programmer / System Engineer in AS/400, PHP, Java, Javascript at the both the USA and Japan. 
 Currently creating a web site for Kitsuki city community with Laravel 5. http://www.triptokitsuki.com
-Yuri has over 7 years working experiences at the Nebraska State Government as a Web application programmer, and has more independent contracts in Visual Basic, WordPress, and other various computer languages in the past 17 years.
+Beerneko has over 7 years working experiences at the Nebraska State Government as a Web application programmer, and has more independent contracts in Visual Basic, WordPress, and other various computer languages in the past 17 years.
 
 https://www.linkedin.com/in/yuriko-bingman-4622ab154
